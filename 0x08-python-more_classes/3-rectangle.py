@@ -3,6 +3,7 @@
 Defines a class Rectangle
 """
 
+
 class Rectangle:
     """Representation of a rectangle"""
     def __init__(self, width=0, height=0)
@@ -12,12 +13,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """getter of the private instance attribute width"""
+        """getter for the private instance attribute width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setter of the private instance attribute width"""
+        """setter for the private instance attribute width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value is < 0:
@@ -26,16 +27,16 @@ class Rectangle:
 
     @property
     def height(self):
-        """getter of the private instance attribute height"""
+        """getter for the private instance attribute height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter of the private instance attribute height"""
+        """setter for the private instance attribute height"""
         if type(value) is not int:
-            raise TypeError("height must be an int")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("heist must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
@@ -44,7 +45,7 @@ class Rectangle:
 
     def perimeter(self):
         """returns the perimeter of the rectangle"""
-        if self.w__width == 0 or self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) - (self.__height *2)
 
