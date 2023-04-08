@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""defines a function to scalar divide matrix"""
+"""defines function to scalar divide matrix"""
 
 
 def matrix_divided(matrix, div):
@@ -15,8 +15,8 @@ def matrix_divided(matrix, div):
             raise TypeError(error_msg)
         len_rows.append(len(row))
         for element in row:
-            if type(element) is not in [int, float]:
-                reaise TypeError(error_msg)
+            if type(element) not in [int, float]:
+                raise TypeError(error_msg)
         row_count += 1
     if len(set(len_rows)) > 1:
         raise TypeError("Each row of the matrix must have the same size")
