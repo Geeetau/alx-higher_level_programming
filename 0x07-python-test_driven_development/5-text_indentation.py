@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This is the "5-test_indentation" module.
+The 5-text_indentation module supplies one function, text_indentation(text).
+"""
+
 
 def text_indetation(text):
     """splits a text into lines along "?", ":", "." followed by 2 new lines"""
@@ -11,7 +16,7 @@ def text_indetation(text):
                 continue
             else:
                 flag = 1
-        if flag ==1:
+        if flag == 1:
             if a == '?' or a == ':' or a == '.':
                 print(a)
                 print()
