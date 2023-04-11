@@ -14,7 +14,7 @@ class BaseGeometry:
         """validates the value"""
         raise TypeError("{:s} must be an integer".format(name))
     if value <= 0:
-        raie ValueError("{:s} must be greater than 0".format(name))
+        raise ValueError("{:s} must be greater than 0".format(name))
 
 class Rectangle(BaseGeometry):
     """a representation of a rectangle"""
