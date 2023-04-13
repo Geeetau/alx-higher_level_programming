@@ -5,7 +5,7 @@ contains the student function
 
 
 class Student:
-    """representation os a student"""
+    """representation of a student"""
     def __init__(self, first_name, last_name, age):
         """initializes the student"""
         self.first_name = first_name
@@ -14,4 +14,4 @@ class Student:
 
         def to_json(self):
             """retrieves a dictionary representation of a Student"""
-            return slef.__dict__
+            return self.__dict__
