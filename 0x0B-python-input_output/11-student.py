@@ -11,21 +11,23 @@ class Student:
     self.age = age
 
     def to_json(self, attrs=None):
-        """retrieves a dictionary representation of a Student"""
+        """returns a dictionary representation of a Student instance
+        with specified attributes"""
         if attrs is None:
-            return slef__dict__
-        new_dict = []
-        for j in attrs:
+            return self.__dict__
+        new_dict = {}
+        for a in attrs:
             try:
-                new_dict[j] = self.__dict__[j]
+                new_dict[a] = self.__dict__[a]
             except FileNotFoundError:
                 pass
-            return new_dict
+        return new_dict
 
-        def reload_from_json(self, json):
-            """replaces all attributes of the Student instance"""
-            for key in json:
-                try:
-                    setattr(self, key, json[key])
-                except FileNotFoundError:
-                    pass
+    def reload_from_json(self, json):
+        """replaces all attributes of the Student instance"""
+        for key in json:
+            try:
+                setattr(self, key, json[key])
+            except FileNotFoundError:
+                pass
+
